@@ -6,7 +6,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.incesoft.tools</groupId>
 	<artifactId>ince-excel</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.0-patched</version>
 
 	<build>
 		<plugins>
@@ -21,13 +21,20 @@
 				</configuration>
 			</plugin>
 		</plugins>
+
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-webdav</artifactId>
+				<version>1.0-alpha-6</version>
+			</extension>
+		</extensions>
 	</build>
+
 	<distributionManagement>
 		<repository>
-			<id>incerepo</id>
-			<url>
-				dav:http://192.168.1.244:8000/artifactory/incerepo
-			</url>
+			<id>analyticom</id>
+			<url>dav:http://repository.analyticom.de/maven/</url>
 		</repository>
 	</distributionManagement>
 
@@ -63,4 +70,9 @@
 			<version>2.6</version>
 		</dependency>
 	</dependencies>
+
+
+
+
+
 </project>
